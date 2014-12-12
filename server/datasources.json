@@ -3,13 +3,13 @@
     "name": "db",
     "connector": "memory"
   },
-  "postgresDB": {
+  "mysqlDs": {
     "host": "localhost",
-    "port": 5432,
-    "database": "postgres",
-    "username": "postgres",
+    "port": 3306,
+    "database": "demo",
+    "username": "demo",
     "password": "L00pback",
-    "name": "postgresDB",
-    "connector": "postgresql"
+    "name": "mysqlDs",
+    "connector": "mysql"
   }
 }
