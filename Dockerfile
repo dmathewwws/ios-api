@@ -26,6 +26,10 @@ RUN cd /ios-api && npm install
 # Expose running port
 EXPOSE 3000
 
-WORKDIR /ios-api
+# WORKDIR /ios-api
 
-RUN slc run
+ADD start.sh /tmp/
+
+RUN chmod +x /tmp/start.sh
+
+CMD ./tmp/start.sh
