@@ -4,10 +4,10 @@
     "connector": "memory"
   },
   "mysqlDs": {
-    "host": "localhost",
+    "host": "192.168.59.103",
     "port": 3306,
     "database": "demo",
-    "username": "demo",
+    "username": "root",
     "password": "L00pback",
     "name": "mysqlDs",
     "connector": "mysql"
