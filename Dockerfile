@@ -11,10 +11,9 @@ RUN npm install --global pg strongloop
 
 ADD . /ios-api
 
-ADD datasources.json /ios-api/server
-
-# Clone project to /gatewayd
 RUN cd /ios-api && npm install
+
+ADD datasources.json /ios-api/server/
 
 # Expose running port
 EXPOSE 3000
