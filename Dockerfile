@@ -9,9 +9,13 @@ RUN apt-get -y update
 # Install stongloops
 RUN npm install --global pg strongloop
 
-ADD . /ios-api
+# use changes to package.json to force Docker not to use the cache
+# when we change our application's nodejs dependencies:
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+RUN mkdir -p /ios-api && cp -a /tmp/node_modules /ios-api/
 
-RUN cd /ios-api && npm install
+ADD . /ios-api
 
 ADD datasources.json /ios-api/server/
 
